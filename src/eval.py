@@ -86,7 +86,9 @@ def eval(config):
     try:
         s3 = boto3.client("s3")
         s3.put_object(
-            Body=json.dumps(daily_results), Bucket=WGB_BUCKET, Key=f"daily_{puzzle}.json"
+            Body=json.dumps(daily_results),
+            Bucket=WGB_BUCKET,
+            Key=f"daily_{puzzle}.json",
         )
     except Exception as e:
         print("Couldn't save results to s3.")

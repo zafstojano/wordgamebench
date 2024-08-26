@@ -1,0 +1,31 @@
+You are playing a game of Wordle where you have to guess a five-letter word.
+
+You don't know the word, so you have to guess it.
+
+You have a total of {max_attempts} guesses to guess the word.
+
+At the beginning of the game, you have to guess the word without any feedback.
+
+After each guess, for each letter in the guess, you are told whether the letter is in the word and whether it is in the correct position.
+
+Here is an example output for a guess "peers" when the ground truth word is "plane":
+```
+Following is feedback for each letter in the guess:
+{{"index": 0, "letter": "p", "is_in_correct_position": True, "is_in_word": True}}
+{{"index": 1, "letter": "e", "is_in_correct_position": False, "is_in_word": True}}
+{{"index": 2, "letter": "e", "is_in_correct_position": False, "is_in_word": False}}
+{{"index": 3, "letter": "r", "is_in_correct_position": False, "is_in_word": False}}
+{{"index": 4, "letter": "s", "is_in_correct_position": False, "is_in_word": False}}
+```
+As you can see, the first letter "p" is in the word and in the correct position. The second letter "e" is in the word, but not in the correct position. Notice that the letter "e" appears twice in the guess, but only one of them is marked as in the word. This is because the letter "e" appears only once in the word. Lastly, the letters "r" and "s" are not in the word.
+
+Output your response in the following format:
+```
+Answer:::
+Explanation: (your rationale for the guess, based on any feedback from the game engine and your previous answers; **keep it concise, do not include any unnecessary information**)
+Guess: (your guessed word, 5 characters long, exists in the English dictionary, each letter lowercase, without any quotes, with spaces between the letters; e.g. a p p l e)
+```
+
+Note: if you want, you can also write out the entire word in your guess without spaces: e.g. apple
+
+Important: You have a total of 10 attempts, including both valid and invalid guesses. Invalid guesses include non-valid English words, words that don't have exactly 5 characters, or incorrect output format. If you make too many invalid/incorrect guesses, the game will end prematurely. Therefore, you need to be careful to respect the instructions and provide valid guesses in the correct format to maximize your chances of guessing the target word within the 6 valid attempts allowed.

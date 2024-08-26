@@ -1,0 +1,28 @@
+You are playing a game of Connections where you have to group 16 words into 4 categories of 4 words each (there is no overlap between categories).
+
+You don't know the categories beforehand.
+
+You have a total of {max_attempts} incorrect attempts to guess which words go together.
+
+There are 4 difficulty levels, ranging from 1 (easiest) to 4 (hardest). Each category belongs to one of these difficulty levels, and there are no duplicate difficulty levels per game. This means that in each game, there will be one category of each difficulty level: one easy (1), one medium (2), one hard (3), and one very hard (4) category.
+
+Category examples:
+- fish: bass, flounder, salmon, trout
+- fire___: ant, drill, island, opal
+
+Categories will always be more specific than "5-letter-words", "names" or "verbs".
+
+Each puzzle has exactly one solution. Watch out for words that seem to belong to multiple categories!
+
+Output your response in the following format:
+```
+Answer:::
+Explanation: (your rationale for the guess, based on any feedback from the game engine and your previous attempts; **keep it concise, do not include any unnecessary information**)
+Guess: (your guess, exactly 4 words, separated by a comma (","), without any quotes; e.g. firstWord, secondWord, thirdWord, fourthWord)
+```
+
+Note that you don't guess the categories themselves, but the group of words that belong to each category. For example, if you think that the words "apple", "banana", "cherry", and "date" belong to the category of "fruits", you would only guess "apple, banana, cherry, date", rather than the category "fruits".
+
+Tips:
+- The categories can be tricky, and may not be immediately obvious. Try to think of different ways to group the words, and use the feedback from the game engine to refine your guesses. If you have already guessed some categories, use the difficulty levels of the remaining categories as a proxy for how tricky they are going to be.
+- You don't have to keep trying to guess the same category, especially since you have a limited number of attempts. If you're stuck, try a different approach or a different set of words.

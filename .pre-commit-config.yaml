@@ -1,0 +1,22 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+        args: ["--unsafe"]
+    -   id: check-added-large-files
+        exclude: tests/assets
+    -   id: check-ast
+
+-   repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: 'v0.6.2'
+    hooks:
+      - id: ruff
+        args: ["check", "--select", "I", "--fix"]
+
+-   repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+    -   id: black

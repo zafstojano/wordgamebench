@@ -1,0 +1,4 @@
+[submodule "aws"]
+	path = aws
+	url = git@github.com:zafstojano/wordgamebench-aws.git
+	branch = main

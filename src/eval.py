@@ -9,24 +9,24 @@ from src.game_engine import HARD_CAP_MAX_ATTEMPTS
 from src.game_manager import ConnectionsGameManager, WordleGameManager
 
 MODELS = [
-    "openai/chatgpt-4o-latest",
-    "openai/gpt-4o",
-    "openai/gpt-4o-mini",
+    "anthropic/claude-3-haiku",
+    "anthropic/claude-3-opus",
+    "anthropic/claude-3.5-sonnet",
+    "google/gemini-flash-1.5",
+    "google/gemini-pro-1.5",
+    "google/gemma-2-27b-it",
+    "google/gemma-2-9b-it",
     "meta-llama/llama-3.1-405b-instruct",
     "meta-llama/llama-3.1-70b-instruct",
     "meta-llama/llama-3.1-8b-instruct",
-    "anthropic/claude-3-opus",
-    "anthropic/claude-3.5-sonnet",
-    "anthropic/claude-3-haiku",
     "mistralai/mistral-large",
     "mistralai/mistral-small",
     "mistralai/mistral-tiny",
-    "google/gemini-pro-1.5",
-    "google/gemini-flash-1.5",
-    "google/gemma-2-27b-it",
-    "google/gemma-2-9b-it",
     "nousresearch/hermes-3-llama-3.1-405b",
     "nousresearch/hermes-3-llama-3.1-70b",
+    "openai/chatgpt-4o-latest",
+    "openai/gpt-4o",
+    "openai/gpt-4o-mini",
 ]
 PUZZLES = ["wordle", "connections"]
 

@@ -1,5 +1,7 @@
 import json
 import os
+import random
+import time
 import uuid
 
 import boto3
@@ -132,7 +134,22 @@ def summarize():
             _process_items(response["Items"], results)
             if "LastEvaluatedKey" not in response:
                 break
-            response = table.scan(ExclusiveStartKey=response["LastEvaluatedKey"])
+
+            # Implement exponential backoff with jitter
+            max_retries = 10
+            for attempt in range(max_retries):
+                try:
+                    response = table.scan(
+                        ExclusiveStartKey=response["LastEvaluatedKey"]
+                    )
+                    break
+                except (
+                    dynamodb.meta.client.exceptions.ProvisionedThroughputExceededException
+                ):
+                    if attempt == max_retries - 1:
+                        raise
+                    sleep_time = (2**attempt * 100) + (random.randint(1, 100))
+                    time.sleep(sleep_time / 1000.0)
     except Exception as e:
         print("Couldn't scan the table.")
         raise e

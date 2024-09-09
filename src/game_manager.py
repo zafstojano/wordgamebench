@@ -11,7 +11,7 @@ from src.game_engine import ConnectionsGameEngine, WordleGameEngine
 from src.prompt_manager import PromptManager
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-MAX_TOKENS = 256
+MAX_TOKENS = 512
 
 
 class BaseGameManager(ABC):

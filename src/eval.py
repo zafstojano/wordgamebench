@@ -29,6 +29,7 @@ MODELS = [
     "openai/chatgpt-4o-latest",
     "openai/gpt-4o",
     "openai/gpt-4o-mini",
+    "mattshumer/reflection-70b:free",
 ]
 PUZZLES = ["wordle", "connections"]
 

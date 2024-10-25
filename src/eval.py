@@ -29,8 +29,9 @@ MODELS = [
     "openai/chatgpt-4o-latest",
     "openai/gpt-4o",
     "openai/gpt-4o-mini",
-    "openai/o1-preview",
-    "openai/o1-mini",
+    # o1 models not available yet
+    # "openai/o1-preview",
+    # "openai/o1-mini",
 ]
 PUZZLES = ["wordle", "connections"]
 
